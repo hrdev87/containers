@@ -7,7 +7,7 @@ pipeline {
     }
 */
     environment {
-        registry = "imranvisualpath/vproappdock"
+        registry = "hrgh8787/app01-img"
         registryCredential = 'dockerhub'
     }
 
@@ -15,7 +15,7 @@ pipeline {
 
         stage('BUILD'){
             steps {
-                sh 'mvn clean install -DskipTests'
+                sh 'mvn install -DskipTests'
             }
             post {
                 success {
